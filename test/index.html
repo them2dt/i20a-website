@@ -87,6 +87,7 @@
     <script>
         //Get the button:
         mybutton = document.getElementById("myBtn");
+        infotab = document.getElementById("infotab");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {
@@ -96,9 +97,12 @@
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
-                mybutton.style.transitionDuration = "1s";
+                infotab.style.display = "none";
+
             } else {
                 mybutton.style.display = "none";
+                infotab.style.display = "block";
+
             }
         }
 
@@ -108,7 +112,7 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
 
-        /*Slideshow-Script*/
+        /*================================================================Slideshow-Script=========================================================*/
         var slideIndex = [1, 1];
         var slideId = ["mySlides1", "mySlides2"]
         showSlides(1, 0);

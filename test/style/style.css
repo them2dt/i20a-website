@@ -107,6 +107,7 @@ html::-webkit-scrollbar {
     justify-content: center;
     background-color: rgb(148, 115, 71);
     margin: 0px;
+    color: white;
 }
 
 .header-content {
@@ -119,12 +120,13 @@ html::-webkit-scrollbar {
 }
 
 .header-content a {
-    background-color: white;
+    background-color: teal;
     border: 3px solid teal;
+    border-radius: 10px;
     padding: 10px;
     overflow-y: scroll;
     text-decoration: none;
-    color: teal;
+    color: rgb(255, 255, 255);
 }
 
 .section-1 {
