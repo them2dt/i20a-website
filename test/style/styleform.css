@@ -1,0 +1,104 @@
+/*FORM CSS----------------------------------------------------------------------------------------------------------------------------*/
+
+.form {
+    outline: none;
+}
+
+p.form {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+h1.form {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.form {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+div.formTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+input.form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button.form {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+textarea.messageBox {
+    border-radius: 10px;
+    outline: none;
+    border: 3px solid white;
+    padding: 10px;
+    height: 20em;
+    width: 30em;
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+textarea:focus {
+    border: 3px solid teal;
+}
+
+#nachricht {
+    padding-bottom: 25px;
+}
+
+#button {
+    width: 100px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#button:hover {
+    border: 2px solid teal;
+}
+
+
+/*END OF FORM CSS---------------------------------------------------------------------------------------------------------------------*/
+
+
+/*START OF VALIDATION CSS*/
+
+.response {
+    display: flex;
+    background-color: teal;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+p.responseText {
+    font-weight: bolder;
+    height: 100vh;
+}
+
+@media screen and (max-width: 750px) {
+    textarea.messageBox {
+        border-radius: 10px;
+        outline: none;
+        border: 3px solid white;
+        padding: 10px;
+        height: 20em;
+        width: 95%;
+    }
+}
