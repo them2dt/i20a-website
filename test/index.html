@@ -26,10 +26,64 @@
                 <h1>What is BYOD?</h1>
             </div>
             <div class="section-1-content-tile-right">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus sunt, a quam recusandae non iusto magnam magni dignissimos assumenda odio. Provident officiis non quo id voluptas cumque sint illum.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
     </section>
+    <div id="section-2" class="section section-2">
+        <div class="section-2-content">
+            <button class="prev" onclick="plusSlides(-1, 0)">&#10094;</button>
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                    <div class="slide-content">
+                        <div class="slide-content-tile-left">
+                            <h1>1900</h1>
+                        </div>
+                        <div class="slide-content-tile-right">
+                            <p>irgendöppis isch erfunde worde</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1">
+                    <div class="slide-content">
+                        <div class="slide-content-tile-left">
+                            <h1>1920</h1>
+                        </div>
+                        <div class="slide-content-tile-right">
+                            <p>irgendöppis isch erfunde worde</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1">
+                    <div class="slide-content">
+                        <div class="slide-content-tile-left">
+                            <h1>1940</h1>
+                        </div>
+                        <div class="slide-content-tile-right">
+                            <p>irgendöppis anderes isch erfunde worde</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1">
+                    <div class="slide-content">
+                        <div class="slide-content-tile-left">
+                            <h1>1960</h1>
+                        </div>
+                        <div class="slide-content-tile-right">
+                            <p>wieder irgendöppis anderes isch erfunde worde</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <button class="next" onclick="plusSlides(1, 0)">&#10095;</button>
+        </div>
+    </div>
     <script>
         //Get the button:
         mybutton = document.getElementById("myBtn");
@@ -52,6 +106,31 @@
         function topFunction() {
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        /*Slideshow-Script*/
+        var slideIndex = [1, 1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            var i;
+            var x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {
+                slideIndex[no] = 1
+            }
+            if (n < 1) {
+                slideIndex[no] = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no] - 1].style.display = "block";
         }
     </script>
 </body>

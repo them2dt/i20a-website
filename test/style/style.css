@@ -54,7 +54,7 @@ html::-webkit-scrollbar {
     /* Text color */
     cursor: pointer;
     /* Add a mouse pointer on hover */
-    padding: 15px;
+    padding: 10px;
     /* Some padding */
     border-radius: 10px;
     /* Rounded corners */
@@ -66,6 +66,7 @@ html::-webkit-scrollbar {
 #myBtn:hover {
     background-color: #555;
     /* Add a dark-grey background on hover */
+    transition-duration: 0.5s;
 }
 
 #infotab {
@@ -142,7 +143,7 @@ html::-webkit-scrollbar {
 }
 
 .section-1-content-tile-left {
-    border: 5px solid white;
+    border: 5px solid rgb(148, 115, 71);
     width: 40vw;
     height: 40vw;
     margin-right: 5px;
@@ -158,7 +159,7 @@ html::-webkit-scrollbar {
 }
 
 .section-1-content-tile-right {
-    border: 5px solid white;
+    border: 5px solid rgb(148, 115, 71);
     width: 40vw;
     height: 40vw;
     margin-left: 5px;
@@ -171,4 +172,111 @@ html::-webkit-scrollbar {
     text-align: justify;
     width: 30vw;
     color: white;
+}
+
+.section-2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(76, 84, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-2-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Next & previous buttons */
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    color: white;
+    background-color: teal;
+    box-shadow: 1px 3px 10px #0000007a;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.mySlides1 {
+    width: 50vw;
+    height: 20vw;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.slide-content-tile-left {
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    width: 25vw;
+    height: 20vw;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content-tile-left h1 {
+    color: white;
+    font-family: Rubik-SemiBold;
+    font-size: 36px;
+}
+
+.slide-content-tile-right {
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    width: 25vw;
+    height: 20vw;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content-tile-right h1 {
+    color: white;
+    font-family: Rubik-SemiBold;
+    font-size: 36px;
 }
