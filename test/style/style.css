@@ -70,6 +70,7 @@ html::-webkit-scrollbar {
 }
 
 #infotab {
+    min-width: 50px;
     /* Hidden by default */
     position: fixed;
     /* Fixed/sticky position */
@@ -97,6 +98,12 @@ html::-webkit-scrollbar {
     /* Increase font size */
     box-shadow: 1px 3px 10px #0000007a;
     /*add Box shadow*/
+}
+
+#expandedText {
+    display: none;
+    width: 10vw;
+    text-align: justify;
 }
 
 .header {
@@ -234,8 +241,8 @@ html::-webkit-scrollbar {
 }
 
 .mySlides1 {
-    width: 50vw;
-    height: 20vw;
+    width: 70vw;
+    height: 40vw;
     align-items: center;
     justify-self: center;
     text-align: center;
@@ -252,8 +259,8 @@ html::-webkit-scrollbar {
 .slide-content-tile-left {
     border-bottom: 5px solid white;
     border-left: 5px solid white;
-    width: 25vw;
-    height: 20vw;
+    width: 36vw;
+    height: 36vw;
     margin-right: 5px;
     display: flex;
     align-items: center;
@@ -269,16 +276,16 @@ html::-webkit-scrollbar {
 .slide-content-tile-right {
     border-top: 5px solid white;
     border-right: 5px solid white;
-    width: 25vw;
-    height: 20vw;
+    width: 36vw;
+    height: 36vw;
     margin-left: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.slide-content-tile-right h1 {
+.slide-content-tile-right p {
     color: white;
-    font-family: Rubik-SemiBold;
-    font-size: 36px;
+    font-family: Rubik-Regular;
+    font-size: 18px;
 }

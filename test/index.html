@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/test/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <title>Projekt Wirtschaft</title>
 </head>
 
 <body><button onclick="topFunction()" id="myBtn" title="Go to top">Nach oben</button>
-    <div class="infotab" id="infotab">
-        <p>Entwickelt von Kevin Bertolini,Tiziano Artifi & Maruthan Thanabalasingam.</p>
-    </div>
+    <button class="infotab" id="infotab" onclick="displayInfo()">
+        <i class="fas fa-info"></i>
+        <p id="expandedText">Die Website wurde entwickelt von Kevin Bertolini, Tiziano Artifi & Maruthan Thanabalasingam. Dies ist ein Schulprojekt. Diese Website wurde ohne CMS programmiert.</p>
+    </button>
+
     <header class="header" id="header">
         <div class="header-content">
             <h1>Wie kam es zum BYOD?</h1>
@@ -88,6 +92,7 @@
         //Get the button:
         mybutton = document.getElementById("myBtn");
         infotab = document.getElementById("infotab");
+        expandedText = document.getElementById("expandedText");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {
@@ -112,6 +117,13 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
 
+        function displayInfo() {
+            if (expandedText.style.display === "none") {
+                expandedText.style.display = "block";
+            } else {
+                expandedText.style.display = "none";
+            }
+        }
         /*================================================================Slideshow-Script=========================================================*/
         var slideIndex = [1, 1];
         var slideId = ["mySlides1", "mySlides2"]
