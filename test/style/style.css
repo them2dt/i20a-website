@@ -217,6 +217,7 @@ html::-webkit-scrollbar {
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
+    margin-top: 10vw;
 }
 
 
@@ -259,8 +260,8 @@ html::-webkit-scrollbar {
 .slide-content-tile-left {
     border-bottom: 5px solid white;
     border-left: 5px solid white;
-    width: 36vw;
-    height: 36vw;
+    width: 50vw;
+    height: 50vw;
     margin-right: 5px;
     display: flex;
     align-items: center;
@@ -270,14 +271,14 @@ html::-webkit-scrollbar {
 .slide-content-tile-left h1 {
     color: white;
     font-family: Rubik-SemiBold;
-    font-size: 36px;
+    font-size: 50px;
 }
 
 .slide-content-tile-right {
     border-top: 5px solid white;
     border-right: 5px solid white;
-    width: 36vw;
-    height: 36vw;
+    width: 50vw;
+    height: 50vw;
     margin-left: 5px;
     display: flex;
     align-items: center;
@@ -287,5 +288,5 @@ html::-webkit-scrollbar {
 .slide-content-tile-right p {
     color: white;
     font-family: Rubik-Regular;
-    font-size: 18px;
+    font-size: 11px;
 }
