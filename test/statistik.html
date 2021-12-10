@@ -44,13 +44,13 @@
         <div class="section-1-content">
             <div class="section-1-content-tile-left">
                 <div class="section-1-content-tile-left-content">
-                    <h1>BYOD-Toleranz bei Unternehmen</h1>
+                    <h1>Gründe für BYOD </h1>
                     <p>Angaben in Prozent.</p>
                 </div>
 
             </div>
             <div class="section-1-content-tile-right">
-                <canvas id="chartJSContainer"></canvas>
+                <canvas id="chart-2"></canvas>
             </div>
         </div>
     </section>
@@ -124,6 +124,74 @@
 
         var ctx = document.getElementById('chart-1').getContext('2d');
         new Chart(ctx, options);
+        /*Chart 2*/
+        var options2 = {
+            type: 'pie',
+            data: {
+                labels: ["Mobilität der Mitarbeiter", "Mitarbeiterzufriedenheit", "Kostenreduktion"],
+                datasets: [{
+                    label: '',
+                    data: [75, 54, 49],
+                    backgroundColor: [
+                        "#995f5f",
+                        "#5f9972",
+                        "#8b8a96"
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            reverse: false
+                        }
+                    }]
+                }
+            }
+        }
+
+        var ctx2 = document.getElementById('chart-2').getContext('2d');
+        new Chart(ctx2, options2);
+        /*Chart 2*/
+        var options2 = {
+            type: 'pie',
+            data: {
+                labels: ["Mobilität der Mitarbeiter", "Mitarbeiterzufriedenheit", "Kostenreduktion"],
+                datasets: [{
+                    label: '',
+                    data: [75, 54, 49],
+                    backgroundColor: [
+                        "#995f5f",
+                        "#5f9972",
+                        "#8b8a96"
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            reverse: false
+                        }
+                    }]
+                }
+            }
+        }
+
+        var ctx2 = document.getElementById('chart-2').getContext('2d');
+        new Chart(ctx2, options2);
     </script>
 </body>
 
