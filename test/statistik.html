@@ -16,7 +16,7 @@
 <body><button onclick="topFunction()" id="myBtn" title="Go to top">Nach oben</button>
     <button class="infotab" id="infotab" onclick="displayInfo()">
         <i class="fas fa-info"></i>
-        <p id="expandedText">Die Website wurde entwickelt von Kevin Bertolini, Tiziano Arifi & Maruthan Thanabalasingam. Dies ist ein Schulprojekt. Diese Website wurde ohne CMS programmiert.</p>
+        <p id="expandedText">Um Daten einzusehen, ziehen Sie mit dem Cursor über die Diagrammfelder.</p>
     </button>
 
     <header class="header" id="header">
@@ -26,26 +26,34 @@
             <a href="#section-1">Starten</a>
         </div>
     </header>
-    <canvas id="oilChart"></canvas>
     <section id="section-1" class="section section-1">
         <div class="section-1-content">
             <div class="section-1-content-tile-left">
-                <h1>BYOD-Toleranz</h1>
+                <div class="section-1-content-tile-left-content">
+                    <h1>BYOD-Toleranz bei Unternehmen</h1>
+                    <p>Angaben in Prozent.</p>
+                </div>
+
             </div>
             <div class="section-1-content-tile-right">
-                <canvas id="chartJSContainer" width="400" height="400"></canvas>
+                <canvas id="chart-1"></canvas>
             </div>
         </div>
     </section>
-    <div id="section-2" class="section section-2">
-        <div class="section-2-content">
+    <section id="section-1" class="section section-1">
+        <div class="section-1-content">
             <div class="section-1-content-tile-left">
-                <h1>Was ist BYOD?</h1>
+                <div class="section-1-content-tile-left-content">
+                    <h1>BYOD-Toleranz bei Unternehmen</h1>
+                    <p>Angaben in Prozent.</p>
+                </div>
+
             </div>
             <div class="section-1-content-tile-right">
+                <canvas id="chartJSContainer"></canvas>
             </div>
         </div>
-    </div>
+    </section>
     <script>
         //Get the button:
         mybutton = document.getElementById("myBtn");
@@ -86,14 +94,24 @@
         var options = {
             type: 'pie',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: ["verbieten BYOD", "erlauben BYOD", "Keine Angabe"],
                 datasets: [{
                     label: '',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [15, 76, 9],
+                    backgroundColor: [
+                        "#995f5f",
+                        "#5f9972",
+                        "#8b8a96"
+                    ],
                     borderWidth: 1
                 }]
             },
             options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                },
                 scales: {
                     yAxes: [{
                         ticks: {
@@ -104,7 +122,7 @@
             }
         }
 
-        var ctx = document.getElementById('chartJSContainer').getContext('2d');
+        var ctx = document.getElementById('chart-1').getContext('2d');
         new Chart(ctx, options);
     </script>
 </body>

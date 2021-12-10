@@ -70,13 +70,13 @@ html::-webkit-scrollbar {
 }
 
 #infotab {
-    min-width: 50px;
+    min-width: 20vw;
     /* Hidden by default */
     position: fixed;
     /* Fixed/sticky position */
     top: 20px;
     /* Place the button at the bottom of the page */
-    right: 30px;
+    right: 10px;
     /* Place the button 30px from the right */
     z-index: 99;
     /* Make sure it does not overlap */
@@ -90,7 +90,8 @@ html::-webkit-scrollbar {
     /* Text color */
     cursor: pointer;
     /* Add a mouse pointer on hover */
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     /* Some padding */
     border-radius: 10px;
     /* Rounded corners */
@@ -98,12 +99,14 @@ html::-webkit-scrollbar {
     /* Increase font size */
     box-shadow: 1px 3px 10px #0000007a;
     /*add Box shadow*/
+    text-align: center;
 }
 
 #expandedText {
     display: none;
-    width: 10vw;
-    text-align: justify;
+    width: 20vw;
+    margin-top: 5px;
+    text-align: center;
 }
 
 .header {
@@ -112,7 +115,7 @@ html::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(148, 115, 71);
+    background-color: rgb(83, 71, 148);
     margin: 0px;
     color: white;
 }
@@ -139,7 +142,7 @@ html::-webkit-scrollbar {
 .section-1 {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(76, 100, 83);
+    background-color: rgb(131, 127, 79);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,7 +155,6 @@ html::-webkit-scrollbar {
 }
 
 .section-1-content-tile-left {
-    border: 5px solid rgb(148, 115, 71);
     width: 40vw;
     height: 40vw;
     margin-right: 5px;
@@ -167,8 +169,13 @@ html::-webkit-scrollbar {
     font-size: 36px;
 }
 
+.section-1-content-tile-left p {
+    color: white;
+    font-family: Rubik-Regular;
+    font-size: 24px;
+}
+
 .section-1-content-tile-right {
-    border: 5px solid rgb(148, 115, 71);
     width: 40vw;
     height: 40vw;
     margin-left: 5px;
