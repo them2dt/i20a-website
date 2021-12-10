@@ -1,6 +1,6 @@
 @font-face {
     font-family: Rubik-SemiBold;
-    src: url(/test/style/fonts/Rubik-SemiBold.ttf) format("truetype");
+    src: url(fonts/Rubik-SemiBold.ttf) format("truetype");
 }
 
 
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: Rubik-Regular;
-    src: url(/test/style/fonts/Rubik-Regular.ttf) format("truetype");
+    src: url(fonts/Rubik-Regular.ttf) format("truetype");
 }
 
 :root {
@@ -76,7 +76,7 @@ html::-webkit-scrollbar {
     /* Fixed/sticky position */
     top: 20px;
     /* Place the button at the bottom of the page */
-    left: 20px;
+    right: 30px;
     /* Place the button 30px from the right */
     z-index: 99;
     /* Make sure it does not overlap */
@@ -180,6 +180,7 @@ html::-webkit-scrollbar {
 .section-1-content-tile-right p {
     text-align: justify;
     width: 30vw;
+    height: 30vw;
     color: white;
 }
 
@@ -288,4 +289,75 @@ html::-webkit-scrollbar {
     color: white;
     font-family: Rubik-Regular;
     font-size: 18px;
+    width: 30vw;
+    text-align: justify;
+}
+
+.section-3 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(79, 63, 110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content-tile-left {
+    border: 5px solid rgb(71, 148, 141);
+    width: 40vw;
+    height: 40vw;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content-tile-left h1 {
+    color: white;
+    font-family: Rubik-SemiBold;
+    font-size: 36px;
+}
+
+.section-3-content-tile-right {
+    border: 5px solid rgb(71, 148, 141);
+    width: 40vw;
+    height: 40vw;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content-tile-right-buttons-button {
+    min-width: 30vw;
+    height: 18vh;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: teal;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    margin: 10px;
+    padding: 10px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 36px;
+    font-family: Rubik-SemiBold;
+    /* Increase font size */
+    box-shadow: 1px 3px 10px #0000007a;
+    /*add Box shadow*/
 }

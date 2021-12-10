@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/test/style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
+    <link rel=icon href=https://cdn-icons-png.flaticon.com/512/2292/2292038.png sizes="16x16" type="image/png">
     <title>Projekt Wirtschaft</title>
 </head>
 
@@ -46,7 +47,8 @@
                             <h1>1900</h1>
                         </div>
                         <div class="slide-content-tile-right">
-                            <p>irgendöppis isch erfunde worde</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni magnam distinctio facere repudiandae, placeat blanditiis, unde molestiae aperiam cupiditate est aspernatur voluptate hic, temporibus dolor! Ut excepturi
+                                nostrum atque?</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +58,9 @@
                             <h1>1920</h1>
                         </div>
                         <div class="slide-content-tile-right">
-                            <p>irgendöppis isch erfunde worde</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum consequatur fuga natus obcaecati voluptatibus in optio incidunt voluptate nostrum. Rem exercitationem dolorum maiores. Earum eos id inventore incidunt
+                                doloribus!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -66,7 +70,7 @@
                             <h1>1940</h1>
                         </div>
                         <div class="slide-content-tile-right">
-                            <p>irgendöppis anderes isch erfunde worde</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, laboriosam rerum esse excepturi et obcaecati in eum cumque dolores animi numquam, dicta tempora iusto rem eveniet ipsa quas! Libero, dolores?</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +80,9 @@
                             <h1>1960</h1>
                         </div>
                         <div class="slide-content-tile-right">
-                            <p>wieder irgendöppis anderes isch erfunde worde</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem velit perspiciatis atque quae, tenetur saepe aspernatur, hic non doloribus eveniet dolores dolorum est quibusdam assumenda animi inventore repellendus voluptate.
+                                Delectus?
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -88,67 +94,81 @@
             <button class="next" onclick="plusSlides(1, 0)">&#10095;</button>
         </div>
     </div>
-    <script>
-        //Get the button:
-        mybutton = document.getElementById("myBtn");
-        infotab = document.getElementById("infotab");
-        expandedText = document.getElementById("expandedText");
+    <div id="section-3" class="section section-3">
+        <div class="section-3-content">
+            <div class="section-3-content-tile-left">
+                <h1>Hier gehts weiter!</h1>
+            </div>
+            <div class="section-3-content-tile-right">
+                <div class="section-3-content-tile-right-buttons">
+                    <p><button class="section-3-content-tile-right-buttons-button">Statistiken</button></p>
+                    <p><button class="section-3-content-tile-right-buttons-button">Quiz</button></p>
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-                infotab.style.display = "none";
+                </div>
+            </div>
+        </div>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+            infotab = document.getElementById("infotab");
+            expandedText = document.getElementById("expandedText");
 
-            } else {
-                mybutton.style.display = "none";
-                infotab.style.display = "block";
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
 
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                    infotab.style.display = "none";
+
+                } else {
+                    mybutton.style.display = "none";
+                    infotab.style.display = "block";
+
+                }
             }
-        }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
 
-        function displayInfo() {
-            if (expandedText.style.display === "none") {
-                expandedText.style.display = "block";
-            } else {
-                expandedText.style.display = "none";
+            function displayInfo() {
+                if (expandedText.style.display === "none") {
+                    expandedText.style.display = "block";
+                } else {
+                    expandedText.style.display = "none";
+                }
             }
-        }
-        /*================================================================Slideshow-Script=========================================================*/
-        var slideIndex = [1, 1];
-        var slideId = ["mySlides1", "mySlides2"]
-        showSlides(1, 0);
-        showSlides(1, 1);
+            /*================================================================Slideshow-Script=========================================================*/
+            var slideIndex = [1, 1];
+            var slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
 
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
-        }
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
 
-        function showSlides(n, no) {
-            var i;
-            var x = document.getElementsByClassName(slideId[no]);
-            if (n > x.length) {
-                slideIndex[no] = 1
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {
+                    slideIndex[no] = 1
+                }
+                if (n < 1) {
+                    slideIndex[no] = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no] - 1].style.display = "block";
             }
-            if (n < 1) {
-                slideIndex[no] = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex[no] - 1].style.display = "block";
-        }
-    </script>
+        </script>
 </body>
 
 </html>
