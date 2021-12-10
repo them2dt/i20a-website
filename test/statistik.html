@@ -40,7 +40,7 @@
             </div>
         </div>
     </section>
-    <section id="section-1" class="section section-1">
+    <section id="section-2" class="section section-1">
         <div class="section-1-content">
             <div class="section-1-content-tile-left">
                 <div class="section-1-content-tile-left-content">
@@ -51,6 +51,20 @@
             </div>
             <div class="section-1-content-tile-right">
                 <canvas id="chart-2"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="section-3" class="section section-1">
+        <div class="section-1-content">
+            <div class="section-1-content-tile-left">
+                <div class="section-1-content-tile-left-content">
+                    <h1>Gründe gegen BYOD </h1>
+                    <p>Angaben in Prozent.</p>
+                </div>
+
+            </div>
+            <div class="section-1-content-tile-right">
+                <canvas id="chart-3"></canvas>
             </div>
         </div>
     </section>
@@ -158,8 +172,8 @@
 
         var ctx2 = document.getElementById('chart-2').getContext('2d');
         new Chart(ctx2, options2);
-        /*Chart 2*/
-        var options2 = {
+        /*Chart 3*/
+        var options3 = {
             type: 'pie',
             data: {
                 labels: ["Mobilität der Mitarbeiter", "Mitarbeiterzufriedenheit", "Kostenreduktion"],
@@ -190,8 +204,8 @@
             }
         }
 
-        var ctx2 = document.getElementById('chart-2').getContext('2d');
-        new Chart(ctx2, options2);
+        var ctx3 = document.getElementById('chart-3').getContext('2d');
+        new Chart(ctx3, options3);
     </script>
 </body>
 
