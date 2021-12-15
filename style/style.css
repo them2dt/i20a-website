@@ -1,395 +1,389 @@
 @font-face {
-    font-family: sfbold;
-    src: url(fonts/sfbold.ttf) format("truetypr");
+    font-family: Rubik-SemiBold;
+    src: url(fonts/Rubik-SemiBold.ttf) format("truetype");
 }
 
 
 /**Initialisiert die Schriftarte für website*/
 
 @font-face {
-    font-family: sfregular;
-    src: url(fonts/sfregular.ttf) format("truetype");
+    font-family: Rubik-Regular;
+    src: url(fonts/Rubik-Regular.ttf) format("truetype");
+}
+
+:root {
+    scroll-behavior: smooth;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: sfbold,Helvetica;
+    font-family: Rubik-Regular;
+    margin: 0;
+    padding: 0;
 }
 
-.dark-mode {
-    background-color: #242424;
-    color: white;
+html {
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
 }
 
-header {
-    display: grid;
-    position: sticky;
-    top: 0;
+html::-webkit-scrollbar {
+    width: 0px;
+    /* For Chrome, Safari, and Opera */
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
     z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: rgb(117, 139, 76);
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 10px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    box-shadow: 1px 3px 10px #0000007a;
 }
 
-.loadinggif {
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+    transition-duration: 0.5s;
+}
+
+#infotab {
+    min-width: 50px;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    top: 20px;
+    /* Place the button at the bottom of the page */
+    left: 20px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: teal;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 10px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 12px;
+    /* Increase font size */
+    box-shadow: 1px 3px 10px #0000007a;
+    /*add Box shadow*/
+}
+
+#expandedText {
+    display: none;
+    width: 10vw;
+    text-align: justify;
+}
+
+.header {
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-body {
-    background-color: #242424;
-    font-family: Helvetica, sans-serif;
-    overflow-x: hidden;
-}
-
-footer.footer {
-    display: flex;
-    background-color: teal;
-    padding: 20px;
-}
-
-table.footer {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    width: 100%;
-}
-
-td.footer {
-    text-align: center;
-    margin: 10px;
-}
-
-table,
-th,
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-td.footer {
-    border: 1px solid none;
-}
-
-#zeitstrahl {
-    display: flex;
     justify-content: center;
-    color: teal;
-    padding: 20px;
-}
-
-#Einleitung {
-    text-align: center;
-    font-size: 45px;
-    padding: 10px;
-    color: teal;
-}
-
-.text {
+    background-color: rgb(148, 115, 71);
+    margin: 0px;
     color: white;
-    font-size: 20px;
+}
+
+.header-content {
     text-align: center;
+    width: 80vw;
 }
 
-
-/* Setzt Grössenlimit für den Zeitstrahl */
-
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+.header-content p {
+    margin-bottom: 20px;
 }
 
-
-/* Der eigentliche Zeitstrahl */
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
+.header-content a {
     background-color: teal;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-
-/* Der Container um den Content */
-
-.container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-
-/* Kreise auf dem Zeitstrahl */
-
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: teal;
-    border: 4px ridge currentColor;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-
-/* Platzierung des linken Containers */
-
-.left {
-    left: 0;
-}
-
-
-/* Platzierung des rechten Containers */
-
-.right {
-    left: 50%;
-}
-
-
-/* Pfeile auf dem linken Container, die nach rechts zeigen */
-
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid teal;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent teal;
-}
-
-
-/* Pfeile auf dem rechten Container, die nach links zeigen */
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid teal;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent teal transparent transparent;
-}
-
-
-/* Positionierung des Kreises vom rechten Container */
-
-.right::after {
-    left: -16px;
-}
-
-
-/* Der Content selber */
-
-.content {
-    padding: 20px 30px;
-    background-color: teal;
-    position: relative;
-    border: medium solid teal;
-    border-radius: 6px;
-}
-
-
-/* Effekt beim Hovern über den Content */
-
-.content:hover {
-    transition-duration: 0.4s;
-    background-color: rgb(3, 105, 105);
-    color: black;
-    border: medium solid teal;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-
-/* Responsiver Media Query für Bildschirme unter 750px breit */
-
-@media screen and (max-width: 750px) {
-    /* Platziere den Zeitstrahl nach links */
-    .timeline::after {
-        left: 31px;
-    }
-    /* Container mit 100% Breite */
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    /* Sicherstellen dass alle Pfeile nach links zeigen */
-    .container::before {
-        left: 60px;
-        border: medium solid teal;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent teal transparent transparent;
-    }
-    /* Sicherstellen dass alle Kreise am richtigen Ort sind */
-    .left::after,
-    .right::after {
-        left: 15px;
-    }
-    /* Alle rechten Container gleich wie die linken */
-    .right {
-        left: 0%;
-    }
-    .ueberschrift {
-        font-size: 30px;
-    }
-    .textbox {
-        line-height: 15px;
-    }
-    .textbox h2 {
-        font-size: 25px;
-    }
-}
-
-
-/* Generation-Content */
-
-.generation-cont {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-}
-
-.text-Image {
-    size: 50px 50px;
-    border: 12px solid orange;
-}
-
-.generation-text {
-    display: block;
-    color: black;
-    height: max-content;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.hide {
-    display: none;
-}
-
-.btntimeline {
-    padding: 20px;
-    font-size: 15px;
-    font-weight: bolder;
     border: 3px solid teal;
-    outline: none;
-    background-color: teal;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 3px 10px #0000007a;
+}
+
+.section-1 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(76, 100, 83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1-content-tile-left {
+    border: 5px solid rgb(148, 115, 71);
+    width: 40vw;
+    height: 40vw;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1-content-tile-left h1 {
     color: white;
-    height: fit-content;
-    border: 5px solid teal;
-    border-radius: 2em;
-    margin: 5px;
+    font-family: Rubik-SemiBold;
+    font-size: 36px;
 }
 
-.btntimeline:hover {
-    transition-duration: 0.4s;
-    border: 3px solid #242424;
-    background-color: rgb(6, 153, 153);
+.section-1-content-tile-right {
+    border: 5px solid rgb(148, 115, 71);
+    width: 40vw;
+    height: 40vw;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.buttonBox {
+.section-1-content-tile-right p {
+    text-align: justify;
+    width: 30vw;
+    color: white;
+}
+
+.section-2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(76, 84, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-2-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Next & previous buttons */
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    color: white;
+    background-color: teal;
+    box-shadow: 1px 3px 10px #0000007a;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    margin-top: 10vw;
+}
+
+
+/* Position the "next button" to the right */
+
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.mySlides1 {
+    width: 70vw;
+    height: 40vw;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.slide-content-tile-left {
+    width: 50vw;
+    height: 50vw;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content-tile-left h1 {
+    color: white;
+    font-family: Rubik-SemiBold;
+    font-size: 50px;
+}
+
+.slide-content-tile-right {
+    width: 50vw;
+    height: 50vw;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content-tile-right p {
+    color: white;
+    font-family: Rubik-Regular;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.section-3 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(79, 63, 110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content-tile-left {
+    width: 40vw;
+    height: 40vw;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content-tile-left h1 {
+    color: white;
+    font-family: Rubik-SemiBold;
+    font-size: 36px;
+}
+
+.section-3-content-tile-right {
+    width: 40vw;
+    height: 40vw;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-content-tile-right-buttons-button {
+    min-width: 30vw;
+    height: 18vh;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: teal;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    margin: 10px;
+    padding: 10px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 36px;
+    font-family: Rubik-SemiBold;
+    /* Increase font size */
+    box-shadow: 1px 3px 10px #0000007a;
+    /*add Box shadow*/
+}
+
+.navbar {
+    background-color: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+    width: 100vw;
+    height: 10vh;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    top: 00px;
+    /* Place the button at the bottom of the page */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
 }
 
-.ueberschrift {
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-
-.ueberschrift:after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    padding-top: 20px;
-    border-bottom: 3px solid black;
-}
-
-.textbox {
-    align-self: center;
-    margin-right: 10%;
-    margin-left: 10%;
-    line-height: 40px;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
+.navbar button {
     background-color: teal;
-    border: 12px solid none;
-    border-radius: 1.5em;
-    padding: 20px;
-}
-
-.textbox h2 {
-    padding-top: 50px;
-    padding-bottom: 30px;
-    font-size: 40px;
-}
-
-.bilder {
-    margin: 40px;
-    text-align: center;
-}
-
-.realImage {
-    border: 6px solid black;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    font-size: 14px;
     border-radius: 10px;
-    width: 30%;
-    height: 30%;
-}
-
-.bildbeschreibung {
-    font-size: 15px;
-}
-
-@media screen and (max-width: 1000px) {
-    .textbox {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .textbox p {
-        font-size: 15px;
-    }
-    .realImage {
-        width: 90%;
-        height: 90%;
-    }
-}
-
-th{
-    font-size: 20px;
-}
-
-th:after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 30%;
-    border-bottom: 3px solid black;
-}
-
-tr {
-    height: 30px;
+    font-size: 18px;
+    /* Increase font size */
+    box-shadow: 1px 3px 10px #0000007a;
+    cursor: pointer;
 }
