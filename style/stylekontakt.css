@@ -28,6 +28,10 @@ html {
     /* For Internet Explorer and Edge */
 }
 
+::placeholder {
+    color: rgba(255, 255, 255, 0.719);
+}
+
 html::-webkit-scrollbar {
     width: 0px;
     /* For Chrome, Safari, and Opera */
@@ -140,7 +144,7 @@ html::-webkit-scrollbar {
 .section-1 {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(76, 100, 83);
+    background-color: rgb(128, 226, 119);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,7 +157,6 @@ html::-webkit-scrollbar {
 }
 
 .section-1-content-tile-left {
-    border: 5px solid rgb(148, 115, 71);
     width: 40vw;
     height: 40vw;
     margin-right: 5px;
@@ -169,7 +172,6 @@ html::-webkit-scrollbar {
 }
 
 .section-1-content-tile-right {
-    border: 5px solid rgb(148, 115, 71);
     width: 40vw;
     height: 40vw;
     margin-left: 5px;
@@ -178,182 +180,44 @@ html::-webkit-scrollbar {
     justify-content: center;
 }
 
-.section-1-content-tile-right p {
-    text-align: justify;
-    width: 30vw;
-    color: white;
-}
-
-.section-2 {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(76, 84, 100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-2-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* Next & previous buttons */
-
-
-/* Next & previous buttons */
-
-.prev,
-.next {
-    cursor: pointer;
-    width: auto;
-    color: white;
+.section-1-content-tile-right-box {
+    width: 35vw;
+    height: 35vw;
+    border-radius: 30px;
     background-color: teal;
-    box-shadow: 1px 3px 10px #0000007a;
-    border: none;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-    margin-top: 10vw;
-}
-
-
-/* Position the "next button" to the right */
-
-
-/* On hover, add a grey background color */
-
-.prev:hover,
-.next:hover {
-    background-color: #f1f1f1;
-    color: black;
-}
-
-
-/* On hover, add a grey background color */
-
-.prev:hover,
-.next:hover {
-    background-color: #f1f1f1;
-    color: black;
-}
-
-.mySlides1 {
-    width: 70vw;
-    height: 40vw;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-self: center;
+    box-shadow: 1px 3px 10px #0000007a;
+}
+
+.section-1-content-tile-right-box-content {
     text-align: center;
 }
 
-.slide-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.slide-content-tile-left {
-    width: 50vw;
-    height: 50vw;
-    margin-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide-content-tile-left h1 {
-    color: white;
-    font-family: Rubik-SemiBold;
-    font-size: 50px;
-}
-
-.slide-content-tile-right {
-    width: 50vw;
-    height: 50vw;
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide-content-tile-right p {
-    color: white;
-    font-family: Rubik-Regular;
-    font-size: 14px;
-    text-align: justify;
-}
-
-.section-3 {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(79, 63, 110);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-3-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-3-content-tile-left {
-    width: 40vw;
-    height: 40vw;
-    margin-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-3-content-tile-left h1 {
-    color: white;
-    font-family: Rubik-SemiBold;
-    font-size: 36px;
-}
-
-.section-3-content-tile-right {
-    width: 40vw;
-    height: 40vw;
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-3-content-tile-right-buttons-button {
-    min-width: 30vw;
-    height: 18vh;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    /* Make sure it does not overlap */
+.section-1-content-tile-right-box-content input[type=text],
+.section-1-content-tile-right-box-content input[type=email] {
+    width: 25vw;
     border: none;
-    /* Remove borders */
-    outline: none;
-    /* Remove outline */
-    background-color: teal;
-    /* Set a background color */
+    background-color: rgb(0, 167, 167);
     color: white;
-    /* Text color */
-    cursor: pointer;
-    /* Add a mouse pointer on hover */
-    margin: 10px;
     padding: 10px;
-    /* Some padding */
-    border-radius: 10px;
-    /* Rounded corners */
-    font-size: 36px;
-    font-family: Rubik-SemiBold;
-    /* Increase font size */
-    box-shadow: 1px 3px 10px #0000007a;
-    /*add Box shadow*/
+    margin: 2.5px;
+}
+
+.section-1-content-tile-right-box-content input[type=submit] {
+    border: none;
+    background-color: rgb(73, 207, 207);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 2.5px;
+    cursor: pointer;
+}
+
+.section-1-content-tile-right p {
+    text-align: center;
+    width: 30vw;
+    color: white;
 }
 
 .navbar {

@@ -368,3 +368,36 @@ html::-webkit-scrollbar {
     box-shadow: 1px 3px 10px #0000007a;
     /*add Box shadow*/
 }
+
+.navbar {
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    top: 00px;
+    /* Place the button at the bottom of the page */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+}
+
+.navbar button {
+    background-color: teal;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* Increase font size */
+    box-shadow: 1px 3px 10px #0000007a;
+    cursor: pointer;
+    width: 10vw;
+}
