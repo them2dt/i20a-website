@@ -252,3 +252,31 @@ html::-webkit-scrollbar {
     cursor: pointer;
     width: 10vw;
 }
+
+.footer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content-tile {
+    border: 5px solid teal;
+    margin: 10px;
+    padding: 10px;
+    width: 20vw;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px #0000007a;
+}
+
+.footer-content-tile h1 {
+    text-align: center;
+}
