@@ -278,5 +278,21 @@ html::-webkit-scrollbar {
 }
 
 .footer-content-tile h1 {
+    text-align: left;
+}
+
+.footer-content-tile-list {
+    margin-top: 20px;
+}
+
+.footer-content-tile-list p {
+    text-align: left;
+    width: 18vw;
+}
+
+.footer-content-tile-list a {
+    text-decoration: none;
+    color: teal;
+    font-size: 18px;
     text-align: center;
 }
